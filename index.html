@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Farouk Balogoun</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/4f58ef09fc.js" crossorigin="anonymous"></script> <!-- Pour les icônes -->
+</head>
+<body>
+  <header class="header">
+    <img src="assets/profile.png" alt="Photo de profil" class="profile-img" />
+    <h1>Portfolio Farouk Balogoun</h1>
+    <p class="subtitle">Bienvenue sur mon site professionnel</p>
+    <a href="assets/CV_Farouk Balogoun.pdf" target="_blank" class="btn">Voir mon CV</a>
+    
+    <div class="dropdown">
+      <button class="btn">Contact <i class="fas fa-chevron-down"></i></button>
+      <div class="dropdown-content">
+        <a href="https://wa.me/79534754996" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://instagram.com/mfarouk_16" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="mailto:balogoun.mf@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="realisations" class="container">
+    <h2>Mes Réalisations</h2>
+    <button class="accordion">Design</button>
+    <div class="panel">
+      <p>Prochainement...</p>
+    </div>
+
+    <button class="accordion">Montage Vidéo</button>
+    <div class="panel">
+      <p>Prochainement...</p>
+    </div>
+
+    <button class="accordion">Analyse de Données</button>
+    <div class="panel">
+      <p>Prochainement...</p>
+    </div>
+
+    <button class="accordion">Autres</button>
+    <div class="panel">
+      <p>Prochainement...</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="mailto:balogoun.mf@gmail.com">Me contacter</a></p>
+    <p>&copy; 2025 - Farouk Balogoun</p>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
